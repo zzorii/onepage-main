@@ -1,0 +1,316 @@
+:root {
+  --sm: 768px;
+  --md: 992px;
+  --lg: 1200px;
+  --bs-primary: rgb(102, 16, 242);
+  --bs-primary-rgb: 102, 16, 242;
+  --light: #fff;
+  --dark: #000;
+}
+
+.section-g {
+  padding: 150px 0;
+}
+.section-g h2 {
+  font-size: 50px;
+}
+
+#header {
+  height: 70px;
+  padding: 0 30px;
+}
+#header .navbar-brand {
+  font-size: 35px;
+  font-weight: 800;
+  letter-spacing: -4px;
+}
+#header .nav-link {
+  margin: 0 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#jumbotron {
+  height: 100vh;
+  position: relative;
+}
+#jumbotron img {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  margin-top: -70px;
+}
+#jumbotron .img-text-box {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Nanum Gothic", sans-serif;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  z-index: 1;
+}
+#jumbotron .img-text-box p {
+  margin-bottom: 0;
+}
+#jumbotron .txt-middle {
+  display: flex;
+}
+#jumbotron .img-text-1 {
+  font-size: 70px;
+}
+#jumbotron .img-text-2 {
+  margin: 0 15px;
+  font-size: 70px;
+  font-weight: 800;
+}
+#jumbotron .img-text-3 {
+  margin-top: -15px;
+  font-size: 100px;
+}
+#jumbotron .img-text-4 {
+  font-size: 15px;
+}
+#jumbotron .search {
+  position: absolute;
+  top: 75vh;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 1;
+}
+#jumbotron .search input {
+  position: relative;
+  border: none;
+  width: 200px;
+  border-bottom: 1.5px solid #fff;
+  background: none;
+}
+#jumbotron .search input::-moz-placeholder {
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 17px;
+  color: #fff;
+}
+#jumbotron .search input::placeholder {
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 17px;
+  color: #fff;
+}
+#jumbotron .search:hover input {
+  border-bottom: 1.5px solid rgb(241, 224, 127);
+}
+#jumbotron .search:hover input::-moz-placeholder {
+  color: rgb(241, 224, 127);
+}
+#jumbotron .search:hover input::placeholder {
+  color: rgb(241, 224, 127);
+}
+#jumbotron .search:hover a::before {
+  color: rgb(241, 224, 127);
+}
+#jumbotron .search a::before {
+  content: "\f002";
+  position: absolute;
+  top: -3px;
+  left: 55%;
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+  font-size: 22px;
+  color: #fff;
+}
+
+#main {
+  position: relative;
+}
+#main #about {
+  position: absolute;
+  top: 90vh;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--light);
+}
+#main #about .row {
+  justify-content: space-between;
+}
+#main #about .about-ani-txt {
+  animation: none;
+  filter: blur(12px);
+  opacity: 0;
+}
+@keyframes focus-in-contract {
+  0% {
+    letter-spacing: 1em;
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+#main #about .about-ani {
+  width: 300px;
+  height: 300px;
+  border-radius: 300px;
+  background: #0229aa;
+  animation: none;
+  opacity: 0;
+  transform: translateX(-600px);
+  animation-timing-function: ease-in;
+}
+@keyframes bounce-in-left {
+  0% {
+    transform: translateX(-600px);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    transform: translateX(0);
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    transform: translateX(-68px);
+    animation-timing-function: ease-in;
+  }
+  72% {
+    transform: translateX(0);
+    animation-timing-function: ease-out;
+  }
+  81% {
+    transform: translateX(-28px);
+    animation-timing-function: ease-in;
+  }
+  90% {
+    transform: translateX(0);
+    animation-timing-function: ease-out;
+  }
+  95% {
+    transform: translateX(-8px);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translateX(0);
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+}
+#main #best {
+  position: absolute;
+  top: 190vh;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  z-index: 1;
+  background: #000;
+}
+#main #gallery {
+  position: absolute;
+  top: 290vh;
+  left: 0;
+  width: 100%;
+  height: 200vh;
+  background: var(--light);
+  z-index: 1;
+}
+#main #gallery .sec-photo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#main #gallery .sec-photo .img-box-2 {
+  margin-top: 24px;
+}
+#main #gallery .sec-photo .img-box-3 {
+  margin-top: 24px;
+}
+#main #gallery .sec-photo .img-box-3 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#main #gallery .sec-photo .img-box-3 .photo-txt {
+  text-align: right;
+}
+#main #gallery .sec-photo .img-box-3 .photo-txt span {
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 50px;
+}
+#main #gallery .sec-photo .img-box-3 .photo-txt p {
+  margin: 20px 0 40px;
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 28px;
+}
+#main #gallery .sec-photo .img-box-3 .more-btn {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0;
+  width: 150px;
+  height: 40px;
+  display: inline-block;
+  border-radius: 3px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+#main #gallery .sec-photo .img-box-3 .spot {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+#main #gallery .sec-photo .img-box-3 .svg-wrapper {
+  margin-top: 0;
+  position: relative;
+  width: 150px;
+  height: 40px;
+  display: inline-block;
+  border-radius: 3px;
+}
+#main #gallery .sec-photo .img-box-3 .shape {
+  stroke-width: 6px;
+  fill: transparent;
+  stroke: #5900ff;
+  stroke-dasharray: 85 400;
+  stroke-dashoffset: -220;
+  transition: 1s all ease;
+}
+#main #gallery .sec-photo .img-box-3 .text {
+  margin-top: -35px;
+  text-align: center;
+}
+#main #gallery .sec-photo .img-box-3 .text a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 800;
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 18px;
+}
+#main #gallery .sec-photo .img-box-3 .svg-wrapper:hover .shape {
+  stroke-dasharray: 50 0;
+  stroke-width: 3px;
+  stroke-dashoffset: 0;
+  stroke: #000;
+}
+#main #service {
+  position: absolute;
+  top: 490vh;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  background: #000;
+  z-index: 1;
+}/*# sourceMappingURL=comm.css.map */
